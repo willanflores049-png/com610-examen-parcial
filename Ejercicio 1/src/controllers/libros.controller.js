@@ -142,9 +142,14 @@ const crearLibro = async (req, res) => {
             ]
         );
 
+        const [libros] = await db.query(
+            'SELECT * FROM libros WHERE id = ?',
+            [resultado.insertId]
+        );
+
         return res.status(201).json({
             mensaje: 'Libro registrado correctamente',
-            id: resultado.insertId
+            libro: libros[0]
         });
 
     } catch (error) {

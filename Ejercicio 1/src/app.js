@@ -4,7 +4,6 @@ const express = require('express');
 const librosRoutes = require('./routes/libros.routes');
 
 const app = express();
-// Puerto de la aplicación
 const PORT = process.env.PORT || 3000;
 
 // Middlewares
@@ -21,15 +20,15 @@ app.get('/', (req, res) => {
 });
 
 // Estado de la API
-app.get('/api/health', (req, res) => {
+app.get('/health', (req, res) => {
     res.status(200).json({
         estado: 'OK',
         servicio: 'API de Libros'
     });
 });
 
-// Rutas de libros
-app.use('/api/libros', librosRoutes);
+// Rutas CRUD de libros
+app.use('/libros', librosRoutes);
 
 // Ruta no encontrada
 app.use((req, res) => {
