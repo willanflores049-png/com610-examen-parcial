@@ -1,0 +1,134 @@
+{
+  "info": {
+    "_postman_id": "1a92d002-8c96-4a18-8efe-aa7d0b3c0613",
+    "name": "COM610 - API REST de Libros",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58489289",
+    "_collection_link": "https://go.postman.co/collection/58489289-1a92d002-8c96-4a18-8efe-aa7d0b3c0613?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "inicio",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://32.201.182.18/libros",
+          "protocol": "http",
+          "host": [
+            "32",
+            "201",
+            "182",
+            "18"
+          ],
+          "path": [
+            "libros"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/health",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Registrar Libro",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"titulo\": \"Redes de Computadoras\",\r\n  \"autor\": \"Andrew Tanenbaum\",\r\n  \"editorial\": \"Pearson\",\r\n  \"anio_publicacion\": 2021,\r\n  \"precio\": 120.50,\r\n  \"stock\": 20\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/libros",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "libros"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Libro",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/libros",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "libros"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Consultar Libro",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/libros/2",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "libros",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar Libro",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/libros/4",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "libros",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}
