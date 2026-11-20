@@ -1,0 +1,30 @@
+{
+  "name": "com610-examen-parcial",
+  "version": "1.0.0",
+  "description": "**Universidad San Francisco Xavier de Chuquisaca**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willanflores049-png/com610-examen-parcial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willanflores049-png/com610-examen-parcial/issues"
+  },
+  "homepage": "https://github.com/willanflores049-png/com610-examen-parcial#readme",
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "mysql2": "^3.24.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
